@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airplane Noise Pollution</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left side - Content sections -->
+      <div class="content-box">
+        <section class="content-section visible">
+          <h1>Airplane Noise Pollution</h1>
+          <p>
+            Amsterdam Schiphol Airport, one of the world’s busiest international
+            hubs, generates a significant amount of aircraft noise, affecting
+            the lives of thousands of people in the surrounding areas. The
+            continuous takeoffs, landings, and low-altitude flight paths
+            contribute to a persistent level of noise pollution, disrupting
+            sleep, increasing stress levels, and impacting overall well-being.
+            Residents near Schiphol report difficulties in concentrating, higher
+            risks of cardiovascular diseases, and a reduced quality of life due
+            to constant exposure to aircraft noise. On this page, we will
+            examine the sources of this noise pollution—such as aircraft
+            engines, aerodynamic noise, and flight density—and explore its
+            far-reaching effects on human health, wildlife, and the environment.
+            By understanding the scale of the problem, we can also look at
+            potential measures to mitigate noise pollution and create a more
+            livable environment for those affected.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Health Impacts</h2>
+          <p>
+            Langdurige blootstelling aan vliegtuiglawaai rond Schiphol heeft
+            serieuze gevolgen voor de gezondheid van omwonenden. Het constante
+            geluid van opstijgende en landende vliegtuigen kan leiden tot
+            chronische stress, slaapproblemen en een verhoogd risico op hart- en
+            vaatziekten. Uit onderzoek blijkt dat mensen die in de buurt van
+            luchthavens wonen vaak last hebben van slaapverstoring, omdat
+            vliegtuiglawaai ook ’s nachts doorgaat. Dit kan leiden tot
+            vermoeidheid, concentratieproblemen en een verminderde kwaliteit van
+            leven.
+            <br />
+            <br />
+            Daarnaast zorgt de langdurige blootstelling aan harde geluiden voor
+            een verhoogde afgifte van stresshormonen zoals cortisol, wat op de
+            lange termijn het risico op hoge bloeddruk en hartziekten verhoogt.
+            <br />
+            <br />
+            Vooral kinderen en ouderen zijn extra kwetsbaar voor de effecten van
+            geluidsoverlast. Kinderen die in lawaaiige gebieden wonen, hebben
+            vaker leer- en aandachtsproblemen, wat hun schoolprestaties kan
+            beïnvloeden. Ouderen en mensen met bestaande gezondheidsproblemen
+            ervaren vaak verergering van hun klachten door de constante
+            geluidsbelasting.
+          </p>
+        </section>
+        <!-- Right side - Fixed image -->
+        <div class="image-container">
+          <img
+            src="./images/a350.png"
+            alt="A350 Aircraft"
+            class="airplane-img"
+          />
+          <div class="image-text">Motoren</div>
+        </div>
+        <section class="content-section">
+          <h2>Waarom?</h2>
+          <p>
+            Een groot deel van de geluidsoverlast door vliegtuigen komt van de
+            motoren. Vliegtuigmotoren produceren extreme hoeveelheden geluid
+            door de enorme kracht die nodig is om een toestel op te laten
+            stijgen en in de lucht te houden. Dit geluid ontstaat voornamelijk
+            door de hoge luchtsnelheden in en rond de motor, de verbranding van
+            brandstof in de straalmotor en de turbulentie die ontstaat bij het
+            uitstoten van hete gassen. Bij moderne straalmotoren wordt lucht met
+            grote snelheid door de motor geperst en gemengd met brandstof,
+            waarna de verbranding een krachtige stuwkracht genereert. Dit proces
+            veroorzaakt niet alleen een diep, laagfrequent geluid, maar ook een
+            harde, schelle toon bij hoge toerentallen. Tijdens het opstijgen en
+            landen zijn de motoren op hun luidst, omdat er dan maximale
+            stuwkracht nodig is.
+          </p>
+        </section>
+        <!-- Add this new section within the content-box div -->
+        <section class="content-section">
+          <h2>Aerodynamica</h2>
+          <p>
+            De aerodynamica van een vliegtuig speelt een belangrijke rol in het
+            geluid dat het maakt tijdens de vlucht. Wanneer een vliegtuig door
+            de lucht beweegt, botst de lucht tegen de verschillende onderdelen
+            van het vliegtuig, zoals de vleugels, romp en motoren. Dit
+            veroorzaakt turbulentie en wervelingen in de lucht, wat leidt tot
+            het ontstaan van aerodynamisch geluid. Een belangrijk onderdeel van
+            dit geluid is de luchtweerstand die de luchtvleugels (en andere
+            delen) ondervinden bij hoge snelheden. Hoe sneller een vliegtuig
+            vliegt, hoe meer luchtverplaatsing er is, en hoe luider het geluid.
+            Dit soort geluid wordt vaak aangeduid als “screech” of “drag noise”.
+            Vooral bij hogere snelheden, zoals tijdens het opstijgen of landen,
+            kunnen deze aerodynamische geluiden erg intens zijn voor omwonende.
+          </p>
+        </section>
+
+        <!-- Add more sections as needed -->
+      </div>
+
+      <!-- Right side - Fixed image -->
+      <div class="image-container">
+        <img src="./images/a350.png" alt="A350 Aircraft" class="airplane-img" />
+        <div class="image-text">Engines</div>
+        <div class="image-text-moving-air">Moving Air: Aerodynamic Noise</div>
+      </div>
+    </div>
+    <!-- Nieuwe fullscreen sectie onder alles -->
+    <section class="fullscreen-section">
+      <h2>vliegbewegingen in 24 uur</h2>
+      <p>
+        Dit is de hoeveelheid vliegbewegingen in de afgelopen 24 uur op en rond
+        schiphol.
+      </p>
+
+      <div id="bar-chart"></div>
+      <h2>Totaal: 1215</h2>
+    </section>
+
+    <section class="bubble-section">
+      <div class="text-container">
+        <h2>Vaak, Vaker, Vaakst</h2>
+        <p>
+          In de diagram hiernaast is goed te zien welke vliegtuig types het
+          meeste vliegen van en naar schiphol. Op Schiphol zijn de vliegtuigen
+          die het meeste vliegen de Airbus A320 en de Boeing 737. Deze
+          vliegtuigen worden vaak ingezet voor kortere Europese vluchten vanwege
+          hun efficiëntie en relatief lage kosten. Hoewel ze veelvuldig de
+          luchthavens aandoen, veroorzaken deze vliegtuigen over het algemeen
+          niet de meeste geluidsoverlast. Dit wordt vooral veroorzaakt door de
+          grotere, intercontinentale vliegtuigen, zoals de Boeing 777 en de
+          Boeing 787. Deze vliegtuigen hebben niet alleen meer passagiers aan
+          boord, maar produceren ook veel meer geluid door hun grotere motoren.
+          Dit is duidelijk te zien in de diagram in de sectie hierboven, waar de
+          grotere vliegtuigen een veel hoger geluidsniveau bereiken dan de
+          kleinere toestellen.
+        </p>
+      </div>
+      <svg id="bubble-chart"></svg>
+    </section>
+    <section class="plain-section">
+      <h2>Does size matter?</h2>
+      <p>
+        Ja, zoals in de diagram goed te zien is is er een duidelijk patroon te
+        zien dat de passagiers capaciteit/grote invloed heeft op de hoeveelheid
+        geluid die een vliegtuig maakt.
+      </p>
+      <h3>Hoe komt dit?</h3>
+      <p>
+        Grote vliegtuigen produceren meer geluid dan kleinere toestellen door
+        hun krachtige motoren en grotere vleugeloppervlak. Vooral bij het
+        opstijgen en landen genereren ze veel decibels door de sterke
+        stuwkracht. Zware toestellen, zoals de Boeing 747 en Airbus A380, hebben
+        meerdere motoren die extra lawaai veroorzaken. Daarnaast zorgt
+        luchtwrijving rond het grote vliegtuiglichaam voor extra aerodynamisch
+        geluid.
+      </p>
+      <div id="scatterplot"></div>
+      <!-- Placeholder for the scatterplot -->
+    </section>
+    <section class="noise-map-section">
+      <div class="noise-map-text">
+        <h1 class="noise-map-title">
+          Heatmap van Geluidsoverlast rondom Schiphol
+        </h1>
+        <p>
+          De heatmap toont de verspreiding van de geluidsoverlast rond de
+          luchthaven Schiphol. De gebieden met de meeste geluidsoverlast
+          bevinden zich dichtbij de luchthaven, waar de meeste vliegbewegingen
+          plaatsvinden. De kaart laat duidelijk de impact van het vliegverkeer
+          zien op de omgeving. Steden zoals Zwanenburg, Aalsmeer en hoofddorp
+          hebben het meest last van de vele laag overvliegende vliegtuigen.
+        </p>
+      </div>
+      <div class="noise-map-image">
+        <img src="./images/nl.svg" alt="Cloud Image" />
+      </div>
+    </section>
+    <section class="PiePie">
+      <div class="text-container2">
+        <h2>Baan gebruik Schiphol</h2>
+        <p>
+          In de donutchart is duidelijk te zien hoe de vliegbewegingen verdeeld
+          zijn over de verschillende banen van Schiphol. Elke sectie van de
+          donut vertegenwoordigt een specifieke landings- of startbaan, en de
+          grootte van elke sectie geeft aan hoeveel vliegbewegingen er
+          plaatsvinden voor die baan. Dit maakt het eenvoudig om te visualiseren
+          welke banen het drukst bevlogen zijn, en hoe de vliegbewegingen
+          verdeeld zijn over het luchtruim van Schiphol.
+          <br />
+          <br />
+          De Polderbaan is de meest gebruikte baan op Schiphol, vooral door de
+          heersende windrichtingen in Nederland. Aangezien de dominante
+          windrichting vaak uit het westen komt, wordt deze baan het vaakst
+          gebruikt voor landingen en opstijgingen. De Polderbaan is optimaal
+          gepositioneerd om luchtverkeer efficiënt af te handelen wanneer de
+          wind deze richting op staat, wat bijdraagt aan het hoge gebruik ervan.
+          Goed voor Schiphol maar slecht voor de omwonende.
+        </p>
+      </div>
+      <svg id="pie-chart"></svg>
+      <div id="legend"></div>
+      <!-- Placeholder for the pie chart -->
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
