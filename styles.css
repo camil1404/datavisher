@@ -3,12 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: FontAviation;
+  src: url(./fonts/AeromoveDemoRegular.ttf);
+}
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
 h1 {
+  font-family: FontAviation;
   color: white;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -49,6 +56,7 @@ h1 {
   transform: translateY(0);
 }
 .content-section p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
 }
 .content-section h2 {
